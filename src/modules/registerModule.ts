@@ -67,6 +67,7 @@ export class Module {
 
 class ModulesWrapper {
 	modules: ModuleAddresser[];
+	static Zaplify: any;
 
 	constructor() {
 		this.modules = [];

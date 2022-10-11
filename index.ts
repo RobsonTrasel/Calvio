@@ -1,16 +1,11 @@
-import {
-    create,
-    Client, 
-    Message
-} from '@open-wa/wa-automate'
+import { create, Client, Message } from '@open-wa/wa-automate'
+import options from './src/config/initialConfig'
 import dotEnv from 'dotenv'
 import DebugServer from './src/debug'
 import { filterProperty } from './src/helper/objectManipulation'
 import parse from './src/lib/parser'
 import ModulesWrapper from './src/modules/registerModule'
 import Zaplify from './src/modules/zaplify/index';
-
-
 
 
 dotEnv.config({
@@ -61,3 +56,9 @@ const DEBUG_PORT = 4000
 DebugServer.listen(DEBUG_PORT, () => {
 	console.log(`[SERVER]: Listening on port ${DEBUG_PORT}`);
 });
+
+create({
+	...options, multiDevice: true
+}).then(client => {
+	start(client)
+})

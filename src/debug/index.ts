@@ -1,10 +1,10 @@
 import { Message, MessageId } from '@open-wa/wa-automate';
 import Express from 'express';
-import { filterProperty } from '../helper/objectManipulation';
+import { filterProperty } from '../helper/ObjectManipulation';
 import parse from '../lib/parser';
 import modules from '../modules';
-import Mocked from './mock/index';
-import { MockedMessageObject } from './mock/models';
+import Mocked from './ZaplifyMock/index';
+import { MockedMessageObject } from './ZaplifyMock/Models';
 
 const DebugServer = Express();
 DebugServer.use(Express.json());

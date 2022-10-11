@@ -1,5 +1,5 @@
 import {Message} from '@open-wa/wa-automate'
-import { Args, Module } from '../registerModule';
+import { Args, Module } from '../ModulesRegister';
 
 class Ping extends Module {
     constructor(){

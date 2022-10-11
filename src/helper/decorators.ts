@@ -1,1 +1,1 @@
-import { Args, Module } from '../modules/registerModule'
+import { Args, Module } from '../modules/ModulesRegister'

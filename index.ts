@@ -1,11 +1,11 @@
 import { create, Client, Message } from '@open-wa/wa-automate'
-import options from './src/config/initialConfig'
+import options from './src/config/startupConfig'
 import dotEnv from 'dotenv'
 import DebugServer from './src/debug'
-import { filterProperty } from './src/helper/objectManipulation'
+import { filterProperty } from './src/helper/ObjectManipulation'
 import parse from './src/lib/parser'
-import ModulesWrapper from './src/modules/registerModule'
-import Zaplify from './src/modules/zaplify/index';
+import ModulesWrapper from './src/modules/ModulesRegister'
+import Zaplify from './src/modules/zaplify';
 
 
 dotEnv.config({

@@ -7,10 +7,10 @@ import {
 	TimelessReply,
 	MockedMessageObject,
 	MessageType,
-} from './models';
+} from './Models';
 import FS from 'fs/promises';
 
-class Mocked {
+class MockedClient {
     req: Req | null;
 	res: Res | null;
 	messageObject: MockedMessageObject | null;
@@ -23,10 +23,10 @@ class Mocked {
 		this.replyQueue = [];
 	}
 
-    static instance: Mocked | null;
+    static instance: MockedClient | null;
 
 	static getInstance(req: Req, res: Res) {
-		if (!this.instance) this.instance = new Mocked();
+		if (!this.instance) this.instance = new MockedClient();
 		this.instance.setRequest(req, res);
 		return this.instance;
 	}
@@ -130,4 +130,4 @@ class Mocked {
 	}
 }
 
-export default Mocked;
+export default MockedClient;

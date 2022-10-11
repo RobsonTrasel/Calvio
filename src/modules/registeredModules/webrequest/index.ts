@@ -1,4 +1,4 @@
-import ModulesWrapper from "../../registerModule";
+import ModulesWrapper from "../../ModulesRegister";
 import Ping from "../../Ping";
 
 const modulesWrapper = new ModulesWrapper();
